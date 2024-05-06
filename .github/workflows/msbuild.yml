@@ -14,7 +14,7 @@ jobs:
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: msbuild Source -m /p:Configuration=Debug /p:Platform=Win32 && msbuild Source -m /p:Configuration=Debug /p:Platform=x64 && msbuild Source -m /p:Configuration=DebugConsole /p:Platform=Win32 && msbuild Source -m /p:Configuration=DebugConsole /p:Platform=x64 && msbuild Source -m /p:Configuration=Release /p:Platform=Win32 && msbuild Source -m /p:Configuration=Release /p:Platform=x64 && msbuild Source -m /p:Configuration=ReleaseInternal /p:Platform=Win32 && msbuild Source -m /p:Configuration=ReleaseInternal /p:Platform=x64 && msbuild Source -m /p:Configuration=ReleaseInternalConsole /p:Platform=Win32 && msbuild Source -m /p:Configuration=ReleaseInternalConsole /p:Platform=x64
+      run: msbuild Source -m /p:Configuration=Debug /p:Platform=Win32 && msbuild Source -m /p:Configuration=Debug /p:Platform=x64 && msbuild Source -m /p:Configuration=DebugConsole /p:Platform=Win32 && msbuild Source -m /p:Configuration=DebugConsole /p:Platform=x64 && msbuild Source -m /p:Configuration=Release /p:Platform=Win32 && msbuild Source -m /p:Configuration=Release /p:Platform=x64 # && msbuild Source -m /p:Configuration=ReleaseInternal /p:Platform=Win32 && msbuild Source -m /p:Configuration=ReleaseInternal /p:Platform=x64 && msbuild Source -m /p:Configuration=ReleaseInternalConsole /p:Platform=Win32 && msbuild Source -m /p:Configuration=ReleaseInternalConsole /p:Platform=x64
 
     - name: Upload
       uses: actions/upload-artifact@v3
